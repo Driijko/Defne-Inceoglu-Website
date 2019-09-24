@@ -1,0 +1,392 @@
+body {
+  background-color: black;
+  color: rgb(179, 179, 179);
+  font-size: 24px;
+  font-family: "Montserrat";
+}
+
+a {
+  color: rgb(49, 49, 49);
+  text-decoration: none;
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+.link:hover {
+  color: white;
+}
+
+.fullNavbarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbarExitContainer {
+  display: none;
+  justify-content: center;
+  height: 4em;
+  margin-bottom: 1em;
+  /* border: 1px solid purple; */
+}
+
+.navbarExit {
+  /* display: none; */
+  object-fit: contain;
+}
+
+.navbarExit:hover {
+  cursor: grab;
+}
+
+.navbar {
+  position: fixed;
+  height: 90%;
+  width: 12%;
+  left: 1em;
+  bottom: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+
+.nav {
+  border: 1px solid black;
+  padding: 23% 0%;
+}
+
+.currentNav {
+  border: 1px solid white;
+  color: white;
+}
+
+.photo {
+  font-size: 0.85em;
+}
+
+.mobileNavbarContainer {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+.mobileNavbar {
+  display: none;
+  height: 4em;
+  object-fit: contain;
+  justify-content: center;
+  width: 15%;
+  /* border: 1px solid green; */
+}
+
+.menuIcon {
+  width: 100%;
+}
+
+.menuIcon:hover {
+  cursor: grab;
+}
+
+.mainbody {
+  margin-left: 14%;
+  /* border: 1px solid purple; */
+}
+
+/* Homepage --------------------------------------------------------------------------------------- */
+
+.homepage header {
+  position: relative;
+  top: 2em;
+  left: 3em;
+  height: 12em;
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 1px solid purple; */
+}
+
+.portrait {
+  display: flex;
+  /* border: 1px solid red; */
+  width: 20%;
+}
+
+.portrait img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.headerText {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  /* border: 1px solid blue; */
+}
+
+.headerText p {
+  font-family: "Montserrat";
+  font-size: 2em;
+}
+
+.resume {
+  font-size: 1.25em;
+  width: 30%;
+  text-align: center;
+  position: relative;
+  left: 3em;
+  bottom: 2em;
+  padding: 0.25em;
+}
+
+.resume:hover {
+  border: 1px solid white;
+}
+
+.bioSection {
+  text-align: justify;
+  margin: 4em 4em;
+}
+
+.name {
+  margin: 1.5em 0px;
+}
+
+.bioSection p {
+  margin: 0.85em 0px;
+}
+
+.homepage h3 {
+  font-size: 1.65em;
+}
+
+.bioSection a {
+  color: rgb(49, 49, 49);
+}
+
+.bioSection a:hover {
+  color: white;
+}
+
+/* Screen Resizing-------------------------------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 480px) {
+  .navbar {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .designpage .zoomLayer {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+  .resume {
+    width: 35%;
+  }
+
+  .designpage .zoomLayer {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    font-size: 13px;
+  }
+  .resume {
+    width: 40%;
+  }
+
+  .zoomLayer {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .zoomImageContainer {
+    margin-right: 14em;
+  }
+
+  .zoomTextBox {
+    margin-right: 16em;
+    margin-top: 4em;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  body {
+    font-size: 12px;
+  }
+
+  .resume {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar {
+    display: none;
+  }
+
+  .mobileNavbar {
+    display: flex;
+  }
+
+  .homepage header {
+    left: 1em;
+    /* border: 1px solid blue; */
+    bottom: 5em;
+  }
+
+  .mainbody {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid purple; */
+  }
+
+  .zoomLayer {
+    bottom: 0.1em;
+    /* padding-bottom: 4em; */
+  }
+
+  .zoomImageContainer {
+    margin-right: 10em;
+  }
+
+  .zoomTextBox {
+    margin-right: 10em;
+    margin-top: 4em;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .resume {
+    left: 0;
+    width: 60%;
+  }
+}
+
+/* Zoom Layer --------------------------------------------------------*/
+.zoomLayer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.9);
+  z-index: 1;
+  display: none;
+  align-items: center;
+}
+
+.zoomImageContainer {
+  position: relative;
+  left: 4em;
+  width: 24em;
+  height: 24em;
+  display: none;
+  justify-content: center;
+}
+
+.zoomTextBox {
+  padding: 1.3em;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  left: 5em;
+  width: 14em;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.zoomImage {
+  object-fit: contain;
+  width: 100%;
+  display: none;
+}
+
+/* Pic Grid -------------------------------------------------*/
+/* 
+.testBox {
+  height: 25%;
+  width: 25%;
+  border: 2px solid red;
+  background-color: black;
+  color: white;
+} */
+
+.picGrid {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+.rowBox {
+  border: 1px solid rgb(17, 17, 17);
+  width: 200px;
+  height: 200px;
+  /* width: 8em;
+  height: 8em; */
+  display: flex;
+  background-color: rgb(5, 5, 5);
+  margin: 1em;
+}
+
+.rowBox:hover {
+  cursor: zoom-in;
+}
+
+.horizontal {
+  align-items: center;
+}
+
+/* IMPORTANT ///////////////////////////////////////////////////////////////////////////////////////////////////////
+/* .designpage img {
+  object-fit: contain;
+} */
+
+.designpage img {
+  width: 100%;
+  height: 100%;
+  /* display: block; */
+  /* -o-object-fit: contain; */
+  object-fit: contain;
+}
+
+.photopage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.paintingpage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Museum Studies ----------------------------------------------------------------------- */
+.underConstructionMessage {
+  position: relative;
+  top: 10em;
+  text-align: center;
+  justify-content: center;
+}
