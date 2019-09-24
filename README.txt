@@ -1,1 +1,1 @@
-A website design for the personal and professional projects of Defne Inceoglu
+A website to showcase the personal and professional projects of Defne Inceoglu
