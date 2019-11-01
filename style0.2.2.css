@@ -316,6 +316,7 @@ a {
   left: 5em;
   width: 14em;
   background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
 }
 
 .zoomImage {
